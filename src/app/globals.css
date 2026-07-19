@@ -4,6 +4,80 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* ── Todi brand tokens ── */
+@theme {
+  /* Brand colours */
+  --color-brand-primary: #001e40;
+  --color-brand-primary-container: #003366;
+  --color-brand-primary-fixed: #d5e3ff;
+  --color-brand-primary-fixed-dim: #a7c8ff;
+  --color-brand-on-primary: #ffffff;
+  --color-brand-on-primary-fixed: #001b3c;
+  --color-brand-on-primary-fixed-variant: #1f477b;
+  --color-brand-on-primary-container: #799dd6;
+  --color-brand-inverse-primary: #a7c8ff;
+
+  --color-brand-secondary: #4e5f7a;
+  --color-brand-secondary-container: #ccdefe;
+  --color-brand-secondary-fixed: #d5e3ff;
+  --color-brand-secondary-fixed-dim: #b6c7e7;
+  --color-brand-on-secondary: #ffffff;
+  --color-brand-on-secondary-container: #51627d;
+  --color-brand-on-secondary-fixed: #091c34;
+  --color-brand-on-secondary-fixed-variant: #374761;
+
+  --color-brand-tertiary: #171f24;
+  --color-brand-tertiary-container: #2c3439;
+  --color-brand-tertiary-fixed: #dbe3ea;
+  --color-brand-tertiary-fixed-dim: #bfc8ce;
+  --color-brand-on-tertiary: #ffffff;
+  --color-brand-on-tertiary-container: #949ca3;
+  --color-brand-on-tertiary-fixed: #151d22;
+  --color-brand-on-tertiary-fixed-variant: #40484d;
+
+  --color-brand-surface: #f9f9fc;
+  --color-brand-surface-bright: #f9f9fc;
+  --color-brand-surface-dim: #dadadc;
+  --color-brand-surface-variant: #e2e2e5;
+  --color-brand-surface-container-lowest: #ffffff;
+  --color-brand-surface-container-low: #f3f3f6;
+  --color-brand-surface-container: #eeeef0;
+  --color-brand-surface-container-high: #e8e8ea;
+  --color-brand-surface-container-highest: #e2e2e5;
+  --color-brand-on-surface: #1a1c1e;
+  --color-brand-on-surface-variant: #43474f;
+  --color-brand-inverse-surface: #2f3133;
+  --color-brand-inverse-on-surface: #f0f0f3;
+  --color-brand-surface-tint: #3a5f94;
+
+  --color-brand-background: #f9f9fc;
+  --color-brand-on-background: #1a1c1e;
+
+  --color-brand-outline: #737780;
+  --color-brand-outline-variant: #c3c6d1;
+
+  --color-brand-error: #ba1a1a;
+  --color-brand-error-container: #ffdad6;
+  --color-brand-on-error: #ffffff;
+  --color-brand-on-error-container: #93000a;
+
+  /* Medical accent — teal */
+  --color-brand-teal: #0d7d6e;
+  --color-brand-teal-light: #e0f5f2;
+  --color-brand-teal-dim: #66bdb3;
+  --color-brand-on-teal: #ffffff;
+
+  /* Typography */
+  --font-serif: "Source Serif 4", serif;
+  --font-sans: Inter, sans-serif;
+
+  /* Custom spacing */
+  --spacing-container-max: 1200px;
+  --spacing-margin-desktop: 64px;
+  --spacing-margin-mobile: 16px;
+  --spacing-gutter: 24px;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -117,17 +191,94 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
+/* ── Todi brand tokens — dark mode overrides ── */
+.dark {
+  /* Deep navy → lighter blues for legibility on dark backgrounds */
+  --color-brand-primary: #a7c8ff;
+  --color-brand-primary-container: #1f477b;
+  --color-brand-primary-fixed: #d5e3ff;
+  --color-brand-primary-fixed-dim: #a7c8ff;
+  --color-brand-on-primary: #001b3c;
+  --color-brand-on-primary-fixed: #001b3c;
+  --color-brand-on-primary-fixed-variant: #1f477b;
+  --color-brand-on-primary-container: #d5e3ff;
+  --color-brand-inverse-primary: #001e40;
+
+  --color-brand-secondary: #b6c7e7;
+  --color-brand-secondary-container: #374761;
+  --color-brand-secondary-fixed: #d5e3ff;
+  --color-brand-secondary-fixed-dim: #b6c7e7;
+  --color-brand-on-secondary: #091c34;
+  --color-brand-on-secondary-container: #d5e3ff;
+  --color-brand-on-secondary-fixed: #091c34;
+  --color-brand-on-secondary-fixed-variant: #374761;
+
+  --color-brand-tertiary: #bfc8ce;
+  --color-brand-tertiary-container: #40484d;
+  --color-brand-tertiary-fixed: #dbe3ea;
+  --color-brand-tertiary-fixed-dim: #bfc8ce;
+  --color-brand-on-tertiary: #151d22;
+  --color-brand-on-tertiary-container: #dbe3ea;
+  --color-brand-on-tertiary-fixed: #151d22;
+  --color-brand-on-tertiary-fixed-variant: #40484d;
+
+  --color-brand-surface: #111318;
+  --color-brand-surface-bright: #37393e;
+  --color-brand-surface-dim: #111318;
+  --color-brand-surface-variant: #43474f;
+  --color-brand-surface-container-lowest: #0c0e13;
+  --color-brand-surface-container-low: #1a1c1e;
+  --color-brand-surface-container: #1e2022;
+  --color-brand-surface-container-high: #282a2d;
+  --color-brand-surface-container-highest: #333538;
+  --color-brand-on-surface: #e2e2e5;
+  --color-brand-on-surface-variant: #c3c6d1;
+  --color-brand-inverse-surface: #e2e2e5;
+  --color-brand-inverse-on-surface: #2f3133;
+  --color-brand-surface-tint: #a7c8ff;
+
+  --color-brand-background: #111318;
+  --color-brand-on-background: #e2e2e5;
+
+  --color-brand-outline: #8d9199;
+  --color-brand-outline-variant: #43474f;
+
+  --color-brand-error: #ffb4ab;
+  --color-brand-error-container: #93000a;
+  --color-brand-on-error: #690005;
+  --color-brand-on-error-container: #ffdad6;
+
+  /* Medical accent — teal (dark mode) */
+  --color-brand-teal: #66bdb3;
+  --color-brand-teal-light: #0d2e2b;
+  --color-brand-teal-dim: #0d7d6e;
+  --color-brand-on-teal: #001b18;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
-  button:not(:disabled), [role="button"]:not(:disabled) {
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
     cursor: pointer;
   }
+
   html {
     @apply font-sans;
+  }
+}
+
+@layer utilities {
+
+  /* Subtle dot-grid background texture for hero/sections */
+  .bg-dot-grid {
+    background-image: radial-gradient(circle, var(--color-brand-secondary, #4e5f7a) 1px, transparent 1px);
+    background-size: 28px 28px;
   }
 }
