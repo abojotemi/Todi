@@ -32,7 +32,7 @@ export default function Navbar() {
         {/* Brand */}
         <Link
           href="/"
-          className="text-2xl font-semibold font-serif text-brand-primary transition-opacity duration-200 hover:opacity-80"
+          className="text-2xl font-semibold font-serif text-brand-primary transition-opacity duration-200 hover:opacity-80 uppercase"
           aria-label="Todi & Partners home"
         >
           Todi &amp; Partners
