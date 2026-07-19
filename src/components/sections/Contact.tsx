@@ -57,7 +57,7 @@ export default function Contact() {
               Connect With Us
             </h2>
             <p className="mt-4 text-base text-white/70 max-w-lg mx-auto">
-              Whether you need consultancy, equipment, or general supply — our
+              Whether you need consultancy, equipment, or general supply our
               team is ready to assist.
             </p>
           </div>

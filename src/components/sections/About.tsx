@@ -28,7 +28,7 @@ export default function About() {
               <div className="relative h-[360px] sm:h-[440px] md:h-[520px] rounded-2xl overflow-hidden shadow-2xl shadow-brand-primary/15 group">
                 <Image
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuDT34_jwt0pT8Ny-6UxKekDGMcpYKr--pLlQrCuMic4ObeJG0DX0FHf9Yu_-TSR8Z6fSeBq_F6A3A_BcELR_aj-DrC23xiiWqt934apmbbz2sulUHRzaqTetObF14U0MztGuA8gfFXk4SGdFYpmS_-BZLX1WrKKucp6TqQeSiqC_bQF5VVcWPIZn32vXBI-EjAiaaY-kApp4Qh7_gm-WVJc1-rxZ7un4QJXYfIXAX1_ubu0vfnT3Y10"
-                  alt="Todi & Partners corporate headquarters in Katampe Extension, Abuja"
+                  alt="Todi & Partners corporate headquarters in Jahi District, Abuja"
                   fill
                   className="object-cover group-hover:scale-[1.03] transition-transform duration-700"
                   sizes="(max-width: 768px) 100vw, 50vw"
@@ -63,7 +63,7 @@ export default function About() {
               </h2>
               <div className="w-12 h-1 rounded-full bg-brand-teal" aria-hidden />
               <p className="text-lg leading-7 text-brand-on-surface-variant">
-                Operating from our strategic headquarters in Katampe Extension,
+                Operating from our strategic headquarters in Jahi District,
                 Abuja, Todi &amp; Partners stands as a pillar of reliability in
                 the Nigerian medical sector.
               </p>

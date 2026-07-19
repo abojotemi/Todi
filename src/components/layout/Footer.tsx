@@ -49,7 +49,13 @@ export default function Footer() {
               </a>
               <span className="inline-flex items-start gap-2 text-sm text-white/70">
                 <MapPin size={14} className="mt-0.5 shrink-0" aria-hidden />
-                Jahi District, Abuja &amp; Akure, Ondo State
+                Abuja Office: Plo497, Cadastral Zone BO8, Jahi District Abuja,
+                Nigeria.
+              </span>
+              <span className="inline-flex items-start gap-2 text-sm text-white/70">
+                <MapPin size={14} className="mt-0.5 shrink-0" aria-hidden />
+                Branch: Plot 5A Block LVII, Off Sola Ajetomobi Street, Oba-Ile
+                Housing Estate, Akure, Ondo State, Nigeria.
               </span>
             </div>
           </div>
