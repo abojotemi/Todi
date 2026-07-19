@@ -1,27 +1,28 @@
 import { Phone, Mail, Globe, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import FadeIn from "@/components/FadeIn";
+import { Card, CardContent } from "@/components/ui/card";
 
 const contactItems = [
   {
-    icon: Phone,
+    Icon: Phone,
     label: "Direct Line",
     display: "+234-803-571-5616",
     href: "tel:+2348035715616",
     description: "Speak directly with our team",
   },
   {
-    icon: Mail,
+    Icon: Mail,
     label: "Email Inquiry",
     display: "info@todiandpartners.com",
     href: "mailto:info@todiandpartners.com",
     description: "We respond within one business day",
   },
   {
-    icon: Globe,
+    Icon: Globe,
     label: "Digital Portal",
-    display: "www.todiandpartners.com.ng",
-    href: "https://www.todiandpartners.com.ng",
+    display: "www.todiandpartners.com",
+    href: "https://www.todiandpartners.com",
     description: "Visit our full website",
     external: true,
   },
@@ -32,22 +33,13 @@ export default function Contact() {
     <section
       id="contact"
       aria-labelledby="contact-heading"
-      className="relative bg-[#0b1829] dark:bg-[#0d1117] py-20 sm:py-14 md:py-28 overflow-hidden"
+      className="bg-[#0b1829] dark:bg-[#0d1117] py-20 sm:py-14 md:py-28"
     >
-      <div
-        aria-hidden
-        className="absolute inset-0 bg-dot-grid opacity-[0.06] pointer-events-none"
-      />
-      <div
-        aria-hidden
-        className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-brand-teal via-brand-primary-fixed-dim to-brand-teal"
-      />
+      <div className="max-w-[1200px] mx-auto px-16 sm:px-6 max-sm:px-4">
 
-      <div className="relative max-w-[1200px] mx-auto px-16 sm:px-6 max-sm:px-4">
-        {/* Header */}
         <FadeIn>
-          <div className="text-center mb-14">
-            <p className="text-xs font-semibold tracking-widest uppercase text-brand-teal-dim mb-3">
+          <div className="mb-12">
+            <p className="text-xs font-semibold tracking-widest uppercase text-brand-teal-dim mb-2">
               Reach Out
             </p>
             <h2
@@ -56,59 +48,54 @@ export default function Contact() {
             >
               Connect With Us
             </h2>
-            <p className="mt-4 text-base text-white/70 max-w-lg mx-auto">
-              Whether you need consultancy, equipment, or general supply our
-              team is ready to assist.
+            <p className="mt-3 text-base text-white/60 max-w-lg">
+              Whether you need consultancy, equipment, or general supply —
+              our team is ready to assist.
             </p>
           </div>
         </FadeIn>
 
-        {/* Cards — staggered */}
-        <ul className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-12" role="list">
-          {contactItems.map((item, i) => (
-            <FadeIn key={item.label} delay={i * 100} direction="up">
+        <ul className="grid grid-cols-1 sm:grid-cols-3 gap-5 mb-10" role="list">
+          {contactItems.map(({ Icon, label, display, href, description, external }, i) => (
+            <FadeIn key={label} delay={i * 80} direction="up">
               <li>
                 <a
-                  href={item.href}
-                  {...(item.external
-                    ? { target: "_blank", rel: "noopener noreferrer" }
-                    : {})}
-                  className="group flex flex-col items-center text-center bg-white/5 hover:bg-white/10 border border-white/10 hover:border-brand-teal/40 rounded-2xl p-8 transition-all duration-300 hover:-translate-y-1"
+                  href={href}
+                  {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                  className="group block"
                 >
-                  <div className="w-14 h-14 rounded-full bg-brand-teal/15 border border-brand-teal/30 flex items-center justify-center text-brand-teal mb-5 group-hover:scale-110 group-hover:bg-brand-teal/25 transition-all duration-300">
-                    <item.icon size={24} aria-hidden />
-                  </div>
-                  <span className="text-xs font-semibold tracking-widest uppercase text-brand-teal-dim mb-2">
-                    {item.label}
-                  </span>
-                  <span className="text-base font-semibold text-white group-hover:underline">
-                    {item.display}
-                  </span>
-                  <span className="text-xs text-white/50 mt-1">
-                    {item.description}
-                  </span>
+                  <Card className="bg-white/5 border-white/10 shadow-none rounded-2xl group-hover:bg-white/10 group-hover:border-brand-teal/30 transition-all duration-300">
+                    <CardContent className="flex flex-col gap-3 pt-6">
+                      <div className="w-10 h-10 rounded-xl bg-brand-teal/15 flex items-center justify-center text-brand-teal group-hover:bg-brand-teal group-hover:text-white transition-colors duration-300">
+                        <Icon size={20} aria-hidden />
+                      </div>
+                      <div>
+                        <p className="text-xs font-semibold tracking-widest uppercase text-white/40 mb-1">
+                          {label}
+                        </p>
+                        <p className="text-sm font-semibold text-white group-hover:underline">
+                          {display}
+                        </p>
+                        <p className="text-xs text-white/40 mt-0.5">{description}</p>
+                      </div>
+                    </CardContent>
+                  </Card>
                 </a>
               </li>
             </FadeIn>
           ))}
         </ul>
 
-        {/* CTA */}
-        <FadeIn delay={300}>
-          <div className="text-center">
-            <Link
-              href="/contact"
-              className="group inline-flex items-center gap-2 bg-brand-teal text-white text-sm font-semibold px-8 py-4 rounded-full hover:bg-brand-teal-dim active:scale-95 transition-all duration-200 shadow-lg shadow-brand-teal/20 hover:shadow-xl hover:shadow-brand-teal/30"
-            >
-              Send Us a Message
-              <ArrowRight
-                size={16}
-                aria-hidden
-                className="group-hover:translate-x-1 transition-transform duration-200"
-              />
-            </Link>
-          </div>
+        <FadeIn delay={240}>
+          <Link
+            href="/contact"
+            className="inline-flex items-center gap-2 bg-brand-teal text-white text-sm font-semibold px-7 py-3.5 rounded-full hover:bg-brand-teal-dim active:scale-95 transition-all duration-200"
+          >
+            Send Us a Message
+            <ArrowRight size={15} aria-hidden />
+          </Link>
         </FadeIn>
+
       </div>
     </section>
   );

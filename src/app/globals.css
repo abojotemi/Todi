@@ -271,15 +271,24 @@
 
   html {
     @apply font-sans;
+    scroll-behavior: smooth;
   }
 }
 
 @layer utilities {
 
-  /* Subtle dot-grid background texture for hero/sections */
-  .bg-dot-grid {
+  /* Fine cross-hatch grid — gives structure without colour */
+  .bg-grid-lines {
+    background-image:
+      linear-gradient(to right, var(--color-brand-secondary, #4e5f7a) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--color-brand-secondary, #4e5f7a) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+
+  /* Dot matrix — denser, smaller */
+  .bg-dot-matrix {
     background-image: radial-gradient(circle, var(--color-brand-secondary, #4e5f7a) 1px, transparent 1px);
-    background-size: 28px 28px;
+    background-size: 20px 20px;
   }
 }
 

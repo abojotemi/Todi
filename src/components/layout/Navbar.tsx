@@ -25,6 +25,8 @@ export default function Navbar() {
           : "bg-brand-surface-container-lowest border-b border-brand-secondary/20"
       )}
     >
+      {/* Thin teal accent rule at very top */}
+      <div className="h-[3px] w-full bg-brand-teal" aria-hidden />
       <nav
         aria-label="Main navigation"
         className="max-w-[1200px] mx-auto flex justify-between items-center px-16 sm:px-6 max-sm:px-4 h-20"
