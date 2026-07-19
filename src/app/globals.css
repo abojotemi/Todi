@@ -277,7 +277,7 @@
 
 @layer utilities {
 
-  /* Fine cross-hatch grid — gives structure without colour */
+  /* Square grid — used in hero */
   .bg-grid-lines {
     background-image:
       linear-gradient(to right, var(--color-brand-secondary, #4e5f7a) 1px, transparent 1px),
@@ -285,7 +285,17 @@
     background-size: 48px 48px;
   }
 
-  /* Dot matrix — denser, smaller */
+  /* Diagonal hatch — used in about panel */
+  .bg-hatch {
+    background-image: repeating-linear-gradient(45deg,
+        var(--color-brand-secondary, #4e5f7a) 0,
+        var(--color-brand-secondary, #4e5f7a) 1px,
+        transparent 0,
+        transparent 50%);
+    background-size: 12px 12px;
+  }
+
+  /* Dot matrix */
   .bg-dot-matrix {
     background-image: radial-gradient(circle, var(--color-brand-secondary, #4e5f7a) 1px, transparent 1px);
     background-size: 20px 20px;
