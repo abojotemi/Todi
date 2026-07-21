@@ -32,7 +32,7 @@ export default function Footer() {
                 alt="Todi & Partners Ltd"
                 height={36}
                 width={507}
-                className="h-9 w-auto brightness-0 invert"
+                className="h-7 w-auto brightness-0 invert"
               />
             </Link>
             <p className="text-sm text-white/60 leading-6">
