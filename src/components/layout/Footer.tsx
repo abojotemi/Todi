@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Phone, Mail, MapPin } from "lucide-react";
 
 const legalLinks = [
@@ -23,10 +24,16 @@ export default function Footer() {
           <div className="flex flex-col gap-5 max-w-sm">
             <Link
               href="/"
-              className="font-serif text-2xl font-bold text-white"
               aria-label="Todi & Partners home"
+              className="inline-flex transition-opacity hover:opacity-80"
             >
-              Todi &amp; Partners
+              <Image
+                src="/todi_logo.png"
+                alt="Todi & Partners Ltd"
+                height={36}
+                width={507}
+                className="h-9 w-auto brightness-0 invert"
+              />
             </Link>
             <p className="text-sm text-white/60 leading-6">
               Pioneering excellence in medical consultancy and equipment supply

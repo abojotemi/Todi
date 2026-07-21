@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { Sun, Moon } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { useTheme } from "@/components/ThemeProvider";
 import { cn } from "@/lib/utils";
 
@@ -27,17 +28,25 @@ export default function Navbar() {
     >
       {/* Thin teal accent rule at very top */}
       <div className="h-[3px] w-full bg-brand-teal" aria-hidden />
+
       <nav
         aria-label="Main navigation"
         className="max-w-[1200px] mx-auto flex justify-between items-center px-16 sm:px-6 max-sm:px-4 h-20"
       >
-        {/* Brand */}
+        {/* Logo */}
         <Link
           href="/"
-          className="text-2xl font-semibold font-serif text-brand-primary transition-opacity duration-200 hover:opacity-80 uppercase"
           aria-label="Todi & Partners home"
+          className="flex items-center transition-opacity duration-200 hover:opacity-80"
         >
-          Todi &amp; Partners
+          <Image
+            src="/todi_logo.png"
+            alt="Todi & Partners Ltd"
+            height={40}
+            width={565}
+            className="h-5 sm:h-5 w-auto max-w-[160px] sm:max-w-[180px] md:max-w-[220px] dark:brightness-0 dark:invert"
+            priority
+          />
         </Link>
 
         {/* Right cluster: theme toggle + CTA */}
