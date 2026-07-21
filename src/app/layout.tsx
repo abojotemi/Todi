@@ -34,7 +34,10 @@ export default function RootLayout({
       className={`${inter.variable} ${sourceSerif.variable}`}
       suppressHydrationWarning
     >
-      <body className="min-h-screen flex flex-col bg-brand-background text-brand-on-background antialiased transition-colors duration-300">
+      <body
+        className="min-h-screen flex flex-col bg-brand-background text-brand-on-background antialiased transition-colors duration-300"
+        suppressHydrationWarning
+      >
         <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>

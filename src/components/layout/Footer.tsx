@@ -30,9 +30,9 @@ export default function Footer() {
               <Image
                 src="/todi_logo.png"
                 alt="Todi & Partners Ltd"
-                height={36}
-                width={507}
-                className="h-7 w-auto brightness-0 invert"
+                height={827}
+                width={671}
+                className="h-15 w-auto brightness-0 invert"
               />
             </Link>
             <p className="text-sm text-white/60 leading-6">

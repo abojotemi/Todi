@@ -42,9 +42,9 @@ export default function Navbar() {
           <Image
             src="/todi_logo.png"
             alt="Todi & Partners Ltd"
-            height={40}
-            width={565}
-            className="h-5 sm:h-5 w-auto max-w-[160px] sm:max-w-[180px] md:max-w-[220px] dark:brightness-0 dark:invert"
+            height={827}
+            width={671}
+            className="h-20 sm:h-11 md:h-12 w-auto dark:brightness-0 dark:invert"
             priority
           />
         </Link>
